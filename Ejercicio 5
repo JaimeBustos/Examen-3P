@@ -1,0 +1,35 @@
+let valor1, valor2, valor3, boton, numero, minimo, maximo;
+function setup() {
+  createCanvas(400, 400);
+   valor1 = createInput("Numero");
+  valor1.position(70, 90);
+  
+  valor2 = createInput("Minimo");
+  valor2.position(70, 130);
+  
+  valor3 = createInput("Maximo");
+  valor3.position(70, 170);
+  
+  boton = createButton('Enviar');
+  boton.position(100, 200);
+  boton.mousePressed(recortar);
+}
+function recortar(numero, minimo, maximo){
+  numero = int(valor1.value());
+  minimo = int(valor2.value());
+  maximo = int(valor3.value());
+  
+  if(numero < minimo){
+    print(minimo);
+  }
+   else if(numero > maximo){
+    print(maximo)
+  }
+   else if(numero > minimo && numero < maximo){
+    print(numero)
+  }
+
+function draw() {
+  background(220);
+}
+}
