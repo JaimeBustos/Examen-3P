@@ -1,0 +1,32 @@
+let num, num2, boton, a, b;
+function setup() {
+  createCanvas(400, 400);
+  background(220)
+   num= createInput("Inserte Numero");
+  num.position(60, 65);
+  
+  num2 = createInput(" Inserte Segundo Numero");
+  num2.position(60, 160);
+  
+  boton = createButton('Mandar');
+  boton.position(100, 120);
+  boton.mousePressed(relacion);
+}
+
+
+function relacion() {
+  background(220);
+  a = num.value();
+  b = num2.value();
+  if(a > b){
+    print(1);
+  }
+  
+  else if(a < b){
+    print(-1)
+  }
+  
+    else if(a == b){
+    print(0)
+  }
+}
